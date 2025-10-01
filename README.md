@@ -22,6 +22,7 @@ You can check all the required Python libraries inside `requirements.txt` file
 
 A recommended project layout:
 
+```text
 amazon-review-sentiment/
 │
 ├── data/                 # datasets (train/test) – not included in repo
@@ -31,7 +32,7 @@ amazon-review-sentiment/
 │
 ├── requirements.txt      # list of dependencies
 └── README.md             # project documentation
-
+```
 
 
 ## 🚀 How to Run
@@ -56,7 +57,7 @@ The project is executed from the command line and requires 4 input arguments:
 Example:
 
 ```bash
-python main.py data/train.csv data/test.csv lr results/result
+python script.py data/train.csv data/test.csv lr results/result
 ```
 
 
