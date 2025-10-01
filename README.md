@@ -10,6 +10,7 @@ You can install them all at once by running:
 
 ```bash
 pip install -r requirements.txt
+```
 
 You can check all the required Python libraries inside `requirements.txt` file
 
@@ -56,6 +57,7 @@ Example:
 
 ```bash
 python main.py data/train.csv data/test.csv lr results/result
+```
 
 
 This command trains a **Logistic Regression** model on `train.csv`, evaluates it on `test.csv`, and saves the predictions to `results` folder.
