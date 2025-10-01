@@ -1,0 +1,12 @@
+pandas
+numpy
+nltk
+matplotlib
+seaborn
+scikit-learn
+textblob
+wordcloud
+tensorflow
+re
+time
+collections
