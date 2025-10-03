@@ -49,6 +49,9 @@ nltk.download('omw-1.4')
 nltk.download('punkt')
 
 
+
+
+
 """
 
 1- Loading data set & Reading data
@@ -56,14 +59,14 @@ nltk.download('punkt')
 """
 
 # Load train and test datasets
-column_names = ['rate', 'title', 'comment']
+column_names = ['id', 'rate', 'title', 'comment']
 # Rating: either 1: negative or 2: positive.
 train_df = pd.read_csv(args_dict["train_data"], header=None, names=column_names)
 test_df = pd.read_csv(args_dict["test_data"], header=None, names=column_names)
 
 # Reduce size to 10% of original dataset
-train_df = train_df.sample(frac=0.1, random_state=1)
-test_df = test_df.sample(frac=0.1, random_state=1)
+#train_df = train_df.sample(frac=0.1, random_state=1)
+#test_df = test_df.sample(frac=0.1, random_state=1)
 
 """
 
@@ -281,7 +284,7 @@ print(f"elapsed_time: {elapsed_time:.2f} seconds")
 
 
 start_time = time.time()
-"""
+
 def lemmatize_text(train_df, test_df):
     # Function to lemmatize a single sentence using TextBlob
     def lemmatize_sentence(text):
@@ -300,7 +303,7 @@ def lemmatize_text(train_df, test_df):
     return train_df, test_df
 
 lemmatize_text(train_df, test_df)
-"""
+
 end_time = time.time()
 elapsed_time = end_time - start_time
 print(f"elapsed_time: {elapsed_time:.2f} seconds")
