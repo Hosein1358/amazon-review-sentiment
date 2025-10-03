@@ -25,11 +25,10 @@ A recommended project layout:
 ```text
 amazon-review-sentiment/
 │
-├── data/                 # datasets (train/test) – not included in repo
-├── notebooks/            # Jupyter notebooks for exploration & experiments
-├── src/                  # source code for preprocessing, training, evaluation
-│   └── script.py         # main script to run the project
-│
+├── data/                 # datasets (train/test) 
+├── results/              # example folder to save the results 
+├── script.py             # source code for preprocessing, training, evaluation
+│                         # main script to run the project
 ├── requirements.txt      # list of dependencies
 └── README.md             # project documentation
 ```
@@ -57,10 +56,14 @@ The project is executed from the command line and requires 4 input arguments:
 Example:
 
 ```bash
-python script.py data/train.csv data/test.csv lr results/result
+python script.py [CSV_DATASET_TRAIN] [CSV_DATASET_TEST] [MODEL_ABBR] [OUTPUT_PREFIX]
 ```
 
 
-This command trains a **Logistic Regression** model on `train.csv`, evaluates it on `test.csv`, and saves the predictions to `results` folder.
+For example:
+```bash
+python script.py data/train.csv data/test.csv lr results/result
+```
+This command trains on `train.csv`, evaluates it on `test.csv`, with a **Logistic Regression** model, and saves the predictions to `results` folder.
 
 
